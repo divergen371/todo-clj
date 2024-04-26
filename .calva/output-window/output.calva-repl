@@ -1,0 +1,300 @@
+; This is the Calva REPL Window.
+; It's just a file, really, with some special treatment from Calva.
+; Use it as a REPL input prompt if you like. (When the REPL is connected.)
+; TIPS: The keyboard shortcut `ctrl+alt+o r` shows and focuses this window
+; Please see https://calva.io/repl-window/ for more info.
+; Happy coding! ♥️
+
+; TIPS: As with any Clojure file when the REPL is connected:
+; - `alt+enter` evaluates the current top level form.
+; - `ctrl+enter` evaluates the current form.
+; Special for this file:
+; - `alt+up` and `alt+down` traverse up and down the REPL command history
+;    when the cursor is after the last contents at the prompt
+; 
+; See also the Calva Inspector: https://calva.io/inspector/
+
+PLEASE NOTE
+We will update the default location of this file.
+The new default location will be
+  "<projectRootPath>/.calva/repl.calva-repl"
+For now the legacy path is used by default.
+To give yourself a smooth transition, you can opt in
+to the change, by configuring this setting as false:
+  "calva.useLegacyReplWindowPath"
+and then add "**/.calva/repl.calva-repl" to your ".gitignore" file.
+
+
+This file is configured as the output destination for all REPL output.
+You can configure this with the setting:
+  "calva.outputDestinations"
+
+
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: pushd /Users/atsushi/clojure/todo-clj ; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; Using host:port 127.0.0.1:52994 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉todo-clj.core꞉> 
+"Please see https://calva.io/output/#about-stdout-in-the-repl-window
+about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉todo-clj.core꞉> 
+; Jack-in done.
+clj꞉todo-clj.core꞉> 
+; ERROR:
+; java.lang.ArithmeticException: long overflow
+; 	at java.base/java.lang.Math.multiplyExact(Math.java:1004)
+; 	at clojure.lang.Numbers.multiply(Numbers.java:1971)
+; 	at nrepl.bencode$read_long.invokeStatic(bencode.clj:128)
+; 	at nrepl.bencode$read_long.invokePrim(bencode.clj)
+; 	at nrepl.bencode$read_netstring_STAR_.invokeStatic(bencode.clj:155)
+; 	at nrepl.bencode$read_netstring_STAR_.invoke(bencode.clj:153)
+; 	at nrepl.bencode$read_token.invokeStatic(bencode.clj:246)
+; 	at nrepl.bencode$read_token.invoke(bencode.clj:236)
+; 	at nrepl.bencode$read_bencode.invokeStatic(bencode.clj:256)
+; 	at nrepl.bencode$read_bencode.invoke(bencode.clj:253)
+; 	at nrepl.transport$bencode$fn__833$fn__834.invoke(transport.clj:122)
+; 	at nrepl.transport$bencode$fn__833.invoke(transport.clj:122)
+; 	at nrepl.transport$fn_transport$fn__787.invoke(transport.clj:50)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2047)
+; 	at clojure.lang.AFn.call(AFn.java:18)
+; 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+; 	at java.base/java.lang.Thread.run(Thread.java:833)
+; ERROR:
+; java.lang.ArithmeticException: long overflow
+; 	at java.base/java.lang.Math.multiplyExact(Math.java:1004)
+; 	at clojure.lang.Numbers.multiply(Numbers.java:1971)
+; 	at nrepl.bencode$read_long.invokeStatic(bencode.clj:128)
+; 	at nrepl.bencode$read_long.invokePrim(bencode.clj)
+; 	at nrepl.bencode$read_netstring_STAR_.invokeStatic(bencode.clj:155)
+; 	at nrepl.bencode$read_netstring_STAR_.invoke(bencode.clj:153)
+; 	at nrepl.bencode$read_token.invokeStatic(bencode.clj:246)
+; 	at nrepl.bencode$read_token.invoke(bencode.clj:236)
+; 	at nrepl.bencode$read_bencode.invokeStatic(bencode.clj:256)
+; 	at nrepl.bencode$read_bencode.invoke(bencode.clj:253)
+; 	at nrepl.transport$bencode$fn__833$fn__834.invoke(transport.clj:122)
+; 	at nrepl.transport$bencode$fn__833.invoke(transport.clj:122)
+; 	at nrepl.transport$fn_transport$fn__787.invoke(transport.clj:50)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2047)
+; 	at clojure.lang.AFn.call(AFn.java:18)
+; 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+; 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+; 	at java.base/java.lang.Thread.run(Thread.java:833)
+; ERROR:
+; java.lang.ArithmeticException: long overflow
+; 	at java.base/java.lang.Math.multiplyExact(Math.java:1004)
+; 	at clojure.lang.Numbers.multiply(Numbers.java:1971)
+; 	at nrepl.bencode$read_long.invokeStatic(bencode.clj:128)
+; 	at nrepl.bencode$read_long.invokePrim(bencode.clj)
+; 	at nrepl.bencode$read_netstring_STAR_.invokeStatic(bencode.clj:155)
+; 	at nrepl.bencode$read_netstring_STAR_.invoke(bencode.clj:153)
+; 	at nrepl.bencode$read_token.invokeStatic(bencode.clj:246)
+; 	at nrepl.bencode$read_token.invoke(bencode.clj:236)
+; 	at nrepl.bencode$read_bencode.invokeStatic(bencode.clj:256)
+; 	at nrepl.bencode$read_bencode.invoke(bencode.clj:253)
+; 	at nrepl.transport$bencode$fn__833$fn__834.invoke(transport.clj:122)
+; 	at nrepl.transport$bencode$fn__833.invoke(transport.clj:122)
+; 	at nrepl.transport$fn_transport$fn__787.invoke(transport.clj:50)
+; 	at clojure.core$binding_conveyor_fn$fn__5823.invoke(core.clj:2047)
+; 	at clojure.lang.AFn.call(AFn.java:18)
+; 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+; 	at java.base/java.utclj꞉todo-clj.core꞉> 
+nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: pushd /Users/atsushi/clojure/todo-clj ; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; Using host:port 127.0.0.1:53007 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉todo-clj.core꞉> 
+; Jack-in done.
+clj꞉todo-clj.core꞉> 
+(require '[ring.adapter.jetty :as s])
+; Syntax error (ClassNotFoundException) compiling at (.calva/output-window/output.calva-repl:1:8504).
+; ring.adapter.jetty
+clj꞉todo-clj.core꞉> 
+(def server (atom nil))
+nil
+clj꞉todo-clj.core꞉> 
+(reset! server (s/rin-jetty (fn [req] {:body, "Hello Wrold"}) {:port 3000 :join? false}))
+; Syntax error compiling at (.calva/output-window/output.calva-repl:1:8504).
+; No such namespace: s
+clj꞉todo-clj.core꞉> 
+; Syntax error (ClassNotFoundException) compiling at (.calva/output-window/output.calva-repl:1:8504).
+; ring.adapter.jetty
+clj꞉todo-clj.core꞉> 
+(require '[ring.adapter.jetty :as s])
+; Syntax error (ClassNotFoundException) compiling at (.calva/output-window/output.calva-repl:1:8504).
+; ring.adapter.jetty
+clj꞉todo-clj.core꞉> 
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: pushd /Users/atsushi/clojure/todo-clj ; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; nREPL Connection was closed
+; Using host:port 127.0.0.1:53108 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉todo-clj.core꞉> 
+; Jack-in done.
+clj꞉todo-clj.core꞉> 
+(require '[ring.adapter.jetty :as s])
+; Syntax error (ClassNotFoundException) compiling at (.calva/output-window/output.calva-repl:1:8505).
+; ring.adapter.jetty
+clj꞉todo-clj.core꞉> 
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: pushd /Users/atsushi/clojure/todo-clj ; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; nREPL Connection was closed
+(require '[ring.adapter.jetty :as s]); Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: pushd /Users/atsushi/clojure/todo-clj ; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; Interrupting Jack-in process.
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: pushd /Users/atsushi/clojure/todo-clj ; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; Interrupting Jack-in process.
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: pushd /Users/atsushi/clojure/todo-clj ; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; Using host:port 127.0.0.1:53167 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉todo-clj.core꞉> 
+; Jack-in done.
+clj꞉todo-clj.core꞉> 
+(require '[ring.adapter.jetty :as s])
+; Syntax error (ClassNotFoundException) compiling at (.calva/output-window/output.calva-repl:1:8504).
+; ring.adapter.jetty
+clj꞉todo-clj.core꞉> 
+:as
+clj꞉todo-clj.core꞉> 
+nil
+; 
+; 2024-04-22 22:05:15.314:INFO::nREPL-session-2b649de9-53bf-459d-9f83-847afdb2dcbc: Logging initialized @57540ms to org.eclipse.jetty.util.log.StdErrLog
+clj꞉todo-clj.core꞉> 
+(def server (atom nil))
+nil
+clj꞉todo-clj.core꞉> 
+#'todo-clj.core/server
+clj꞉todo-clj.core꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: pushd /Users/atsushi/clojure/todo-clj ; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; Using host:port 127.0.0.1:53415 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉todo-clj.core꞉> 
+; Jack-in done.
+clj꞉todo-clj.core꞉> 
+(require '[ring.adapter.jetty :as s])
+nil
+; 
+; 2024-04-22 22:15:20.051:INFO::nREPL-session-59d84577-717b-4cfa-9eed-82c4e98c4fc5: Logging initialized @29980ms to org.eclipse.jetty.util.log.StdErrLog
+clj꞉todo-clj.core꞉> 
+(def server (atom nil))
+#'todo-clj.core/server
+clj꞉todo-clj.core꞉> 
+(reset! server (s/run-jetty (fn [req] {:body "Hello Wrold"}) {:port 3000 :join? false}))
+; Syntax error compiling at (.calva/output-window/output.calva-repl:244:16).
+; No such var: s/ring-jetty
+clj꞉todo-clj.core꞉> 
+#object[org.eclipse.jetty.server.Server 0x722d87f6 "Server@722d87f6{STARTED}[9.4.38.v20210224]"]
+; 
+; 2024-04-22 22:16:39.257:INFO:oejs.Server:nREPL-session-59d84577-717b-4cfa-9eed-82c4e98c4fc5: jetty-9.4.38.v20210224; built: 2021-02-24T20:25:07.675Z; git: 288f3cc74549e8a913bf363250b0744f2695b8e6; jvm 17.0.8+9-LTS-211
+; 2024-04-22 22:16:39.275:INFO:oejs.AbstractConnector:nREPL-session-59d84577-717b-4cfa-9eed-82c4e98c4fc5: Started ServerConnector@798644d5{HTTP/1.1, (http/1.1)}{0.0.0.0:3000}
+; 2024-04-22 22:16:39.275:INFO:oejs.Server:nREPL-session-59d84577-717b-4cfa-9eed-82c4e98c4fc5: Started @109207ms
+clj꞉todo-clj.core꞉> 
+(.stop @server)
+nil
+; 
+; 2024-04-22 22:17:09.661:INFO:oejs.AbstractConnector:nREPL-session-59d84577-717b-4cfa-9eed-82c4e98c4fc5: Stopped ServerConnector@798644d5{HTTP/1.1, (http/1.1)}{0.0.0.0:3000}
+clj꞉todo-clj.core꞉> 
+(reset! server nil)
+nil
+clj꞉todo-clj.core꞉> 
+; Evaluating file: core.clj
+; 
+; Syntax error compiling at (src/todo_clj/core.clj:12:20).
+; No such namespace: server
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉todo-clj.core꞉> 
+(require '[todo-clj.core :as c])
+nil
+clj꞉todo-clj.core꞉> 
+(c/start-server
+ ;; => #object[clojure.lang.Var$Unbound 0x5773bd01 "Unbound: #'todo-clj.core/start-server"]
+clj꞉todo-clj.core꞉> 
+)
+#object[clojure.lang.Var$Unbound 0x5773bd01 "Unbound: #'todo-clj.core/start-server"]
+(c/start-server)
+; Execution error (IllegalStateException) at todo-clj.core/eval10726 (form-init2846956623879309242.clj:276).
+; Attempting to call unbound fn: #'todo-clj.core/start-server
+clj꞉todo-clj.core꞉> 
+(c/stop-server)
+; Syntax error compiling at (.calva/output-window/output.calva-repl:280:1).
+; No such var: c/stop-server
+clj꞉todo-clj.core꞉> 
+; Evaluating file: core.clj
+; 
+; Syntax error compiling at (src/todo_clj/core.clj:12:20).
+; No such namespace: server
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉todo-clj.core꞉> 
+; Evaluating file: core.clj
+; 
+; Syntax error compiling at (src/todo_clj/core.clj:12:20).
+; No such namespace: server
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉todo-clj.core꞉> 
+(c/start-server)
+; Execution error (IllegalStateException) at todo-clj.core/eval10763 (form-init2846956623879309242.clj:296).
+; Attempting to call unbound fn: #'todo-clj.core/start-server
+clj꞉todo-clj.core꞉> 
+; nREPL Connection was closed
